@@ -19,7 +19,7 @@ class driverFactory extends Factory
         return [
             'name' => fake()->name,
             'email' => fake()->email,
-            'gender' => fake()->
+            'gender' => fake()->gender,
 
         ];
     }
