@@ -32,7 +32,7 @@
         <!--=================================
  Main content -->
         <!-- main-content -->
-        <div class="content-wrapper">
+        {{-- <div class="content-wrapper">
             <div class="page-title">
                 <div class="row">
                     <div class="col-sm-6">
@@ -43,9 +43,11 @@
                         </ol>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
+
             <!-- widgets -->
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
                     <div class="card card-statistics h-100">
                         <div class="card-body">
@@ -663,7 +665,218 @@
                         </div>
                     </div>
                 </div>
+            </div> --}}
+
+              <div class="content-wrapper header-info">
+      <div class="page-title">
+      <div class="row">
+          <div class="col-md-6">
+            <h3 class="mb-15 text-white" > IDRS  </h3>
+            <span class="mb-10 mb-md-30 text-white d-block">View a summary of your account navigate to the most important account activities.</span>
+          </div>
+          <div class="col-md-6">
+          <div class="card">
+            <div class="btn-group info-drop header-info-button">
+                {{-- <button type="button" class="dropdown-toggle-split  button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Add new <i class="ti-plus"></i></button> --}}
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#"><i class="text-dark ti-layers-alt"></i>Add Project </a>
+                  <a class="dropdown-item" href="#"><i class="text-primary ti-files"></i>Add Task </a>
+                  <a class="dropdown-item" href="#"><i class="text-warning ti-id-badge"></i>Add team </a>
+                  <a class="dropdown-item" href="#"><i class="text-dark ti-pencil-alt"></i>Leave app </a>
+                  <a class="dropdown-item" href="#"><i class="text-success ti-email"></i>New Message</a>
+                  <a class="dropdown-item" href="#"><i class="text-warning ti-user"></i>Edit Profile</a>
+                  <a class="dropdown-item" href="#"><i class="text-info ti-settings"></i>Settings</a>
+                  <a class="dropdown-item" href="#"><i class="text-danger ti-unlock"></i>Logout</a>
+                </div>
+              </div>
             </div>
+           </div>
+          </div>
+        </div>
+      <!-- widgets -->
+      <div class="row account-overview mb-30">
+       <div class="col-12">
+        <div class="card card-statistics h-100">
+         <div class="card-body bg-white">
+           <h5 class="card-title">Statistics </h5>
+            <div class="row">
+              <div class="col-xl-3 col-sm-6">
+               <div class="row">
+                  <div class="col-md-7 col-sm-7 col-7 align-self-center">
+                    {{-- <span>Percentage Up</span>
+                    <h4 class="text-danger fw-6 mt-10">655 Share</h4> --}}
+                  </div>
+                  <div class="col-md-5 col-sm-5 col-5 align-self-center text-right">
+                   <span class="round-chart mb-0" data-percent="100" data-size="80" data-width="4"  data-color="#17a2b8" > <span class="percent"></span> </span>
+                </div>
+              </div>
+            </div>
+            <div style="display:none">
+                {{$total = \App\Models\DriverInf::count()}}
+                {{$danger = \App\Models\DriverInf::where('status','danger')->count()}}
+                {{$safe = \App\Models\DriverInf::where('status','done')->count()}}
+                {{$dan_perc =round($danger / $total  * 100) }}
+                {{$safe_perc= round($safe / $total  * 100) }}
+            </div>
+            <div class="col-xl-3 col-sm-6">
+               <div class="row">
+                  <div class="col-md-7 col-sm-7 col-7 align-self-center">
+                    <span><h5> Total Cars</h4> </span>
+                    <h5 class="text-info fw-6 mt-10">{{$total}} Car </h5>
+                  </div>
+                  <div class="col-md-5 col-sm-5 col-5 align-self-center text-right">
+                   <span class="round-chart mb-0" data-percent="{{$dan_perc}}" data-size="80" data-width="4"data-color="#dc3545" > <span class="percent"></span> </span>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+             <div class="row">
+                <div class="col-md-7 col-sm-7 col-7 align-self-center">
+                  <span><h5>Danger Cars</h5> </span>
+                  <h5 class="text-danger fw-6 mt-10">{{$danger}} Car</h5>
+
+
+
+
+                </div>
+                <div class="col-md-5 col-sm-5 col-5 align-self-center text-right">
+                 <span class="round-chart mb-0" data-percent="{{$safe_perc}}" data-size="80" data-width="4" data-color="#28a745"> <span class="percent"></span> </span>
+                </div>
+             </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+             <div class="row">
+                <div class="col-md-7 col-sm-7 col-7 align-self-center">
+                  <span><h5>Safe Cars</h5>  </span>
+                  <h5 class="text-success fw-6 mt-10">{{$safe }} Car</h5>
+                </div>
+                <div class="col-md-5 col-sm-5 col-5 align-self-center text-right">
+                 {{-- <span class="round-chart mb-0" data-percent="80" data-size="80" data-width="4" data-color="#ffc107"> <span class="percent"></span> </span> --}}
+                </div>
+             </div>
+           </div>
+           </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      {{-- <div class="row">
+
+
+        <div class="col-xl-4 mb-30">
+           <div class="card card-statistics h-100">
+             <div class="card-body">
+              <h5 class="card-title">Customer Feedback</h5>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="clearfix">
+                       <p class="mb-10 float-left">Positive</p>
+                       <i class="mb-10 text-success float-right fa fa-arrow-up"> </i>
+                    </div>
+                    <div class="progress progress-small">
+                      <div class="skill2-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h5 class="mt-10 text-success">8501</h5>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="clearfix">
+                       <p class="mb-10 float-left">Negative</p>
+                       <i class="mb-10 text-danger float-right fa fa-arrow-down"> </i>
+                    </div>
+                    <div class="progress progress-small">
+                      <div class="skill2-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h5 class="mt-10 text-danger">3251</h5>
+                  </div>
+               </div>
+              <div id="morris-area" class="hide-axis" style="height: 320px;"></div>
+             </div>
+           </div>
+        </div>
+      </div> --}}
+       <div class="row">
+         <div class="col-xl-4 mb-30">
+          <div class="card data-usage h-100">
+          <div class="card-body">
+            <h5 class="card-title">Monthly Usage</h5>
+            <div class="row d-flex align-items-center">
+              <div class="col-sm-6">
+                <span class="round-chart" data-percent="77" data-width="5" data-color="#84ba3f">
+                  <span class="percent"></span>
+                </span>
+              </div>
+              <div class="col-sm-6">
+                <h2 class="theme-color font-weight-bold">70.45 GB</h2>
+                <small>Current Plan</small>
+                <h5 class="mt-2 text-dark">263 GB Per Month</h5></div>
+            </div>
+            <p><strong>Note:</strong> You can upgrade your existing Premium Plan to a plan with more features, or a longer subscription period.</p>
+          </div>
+        </div>
+        </div>
+        <div class="col-xl-4 mb-30">
+         <div class="card card-statistics h-100">
+            <div class="card-body text-left">
+               <h5 class="card-title">Members Activity</h5>
+                <div class="row">
+                  <div class="col-6 col-sm-6 mb-30">
+                    <div class="counter">
+                      <span class="timer text-success" data-to="4905" data-speed="10000">4905</span>
+                      <label class="text-capitalize mt-0">New submissions </label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-6 mb-30">
+                    <div class="counter">
+                      <span class="timer text-info" data-to="6524" data-speed="10000">6524</span>
+                      <label class="text-capitalize mt-0">New contacts</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="row">
+                  <div class="col-6 col-sm-4 mt-30">
+                     <b>Daily visitors</b>
+                     <p>465</p>
+                  </div>
+                  <div class="col-6 col-sm-4 mt-30">
+                    <b>Active</b>
+                     <p>9524</p>
+                  </div>
+                  <div class="col-6 col-sm-4 mt-30">
+                    <b>Inactive</b>
+                     <p>1283</p>
+                  </div>
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-30">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Donut Chart </h5>
+                <div id="morris-donut" style="height: 320px;"></div>
+                 <div class="text-center">
+                     <ul class="list-inline card-detail-list m-b-0">
+                         <li class="list-inline-item">
+                             <i class="fa fa-circle mr-2"></i>Financial
+                         </li>
+                         <li class="list-inline-item">
+                             <i class="fa fa-circle mr-2"></i>Markets
+                         </li>
+                         <li class="list-inline-item">
+                             <i class="fa fa-circle mr-2"></i>Electricity
+                         </li>
+                     </ul>
+                 </div>
+              </div>
+            </div>
+           </div>
+
+      </div>
+
+
+
             <!--=================================
  wrapper -->
 
@@ -681,26 +894,7 @@
 
     @include('layouts.footer-scripts')
 
-    <script>
-        // Retrieve the user's location data
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
 
-        // Send an AJAX request to store the location data
-        $.ajax({
-            url: '/location',
-            type: 'POST',
-            data: {latitude: latitude, longitude: longitude},
-            success: function(response) {
-                console.log('Location data stored successfully');
-            }
-        });
-    });
-}
-
-    </script>
 </body>
 
 

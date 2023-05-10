@@ -25,7 +25,7 @@ Show Drivers Inf
                   <h5 class="card-title pb-0 border-0">Drivers Informations </h5>
                 </div>
                 <div class="d-block d-md-flex clearfix sm-mt-20">
-                   <div class="clearfix">
+                   {{-- <div class="clearfix">
                      <div class="box">
                       <select class="fancyselect sm-mb-20 mr-20">
                         <option value="1">Some option</option>
@@ -34,7 +34,7 @@ Show Drivers Inf
                         <option value="4">Potato</option>
                       </select>
                     </div>
-                  </div>
+                  </div> --}}
                    <div class="widget-search ml-0 clearfix">
                     <i class="fa fa-search"></i>
                     <input type="search" class="form-control" placeholder="Search....">

@@ -8,7 +8,6 @@
     <meta name="description" content="Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template" />
     <meta name="author" content="potenzaglobalsolutions.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        {{-- <meta http-equiv="refresh" content="3"> --}}
     @include('layouts.head')
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -24,6 +23,14 @@
         border-radius: 10px;
         background-color: #f0f0f0;
       }
+      #my-label {
+        font-size: 1.1rem; /* increase font size to 1.2rem */
+        }
+        .badge-danger {
+            font-size: 1.2rem;
+            padding: 0.6rem 0.9rem; /* increase padding to 0.3rem top/bottom and 0.6rem left/right */
+            /* background-color: #160b0c; set background color to red */
+            }
             #map { height: 300px;  width: 1210px}
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -53,10 +60,13 @@
         <!--=================================
  Main content -->
         <!-- main-content -->
-        <div class="content-wrapper">
+<div class="content-wrapper">
 
-     {{$latitude = 50.32323}}
-     {{$longitude = 30.132323}}
+     <div style="display:none;">
+        {{$latitude = 50.32323}}
+        {{$longitude = 30.132323}}
+     </div>
+
 
             <div class="row">
                 <div class="col-xl-12 mb-30">
@@ -64,19 +74,9 @@
                     <div class="card-body">
                      <div class="d-block d-md-flex justify-content-between">
                         <div class="d-block">
-                          <h5 class="card-title pb-0 border-0">Data Local</h5>
+                          <h5 class="card-title pb-0 border-0"> Urgent Cars </h5>
                         </div>
                         <div class="d-block d-md-flex clearfix sm-mt-20">
-                           <div class="clearfix">
-                             <div class="box">
-                              <select class="fancyselect sm-mb-20 mr-20">
-                                <option value="1">Some option</option>
-                                <option value="2">Another option</option>
-                                <option value="3">A option</option>
-                                <option value="4">Potato</option>
-                              </select>
-                            </div>
-                          </div>
                            <div class="widget-search ml-0 clearfix">
                             <i class="fa fa-search"></i>
                             <input type="search" class="form-control" placeholder="Search....">
@@ -90,8 +90,8 @@
                               <th>Driver ID </th>
                               <th>Driver Name</th>
                               <th>Current Status</th>
-                              <th>latitude</th>
-                              <td>longitude</td>
+                              {{-- <th>latitude</th> --}}
+                              {{-- <td>longitude</td> --}}
                               <th></th>
                               <th></th>
                             </tr>
@@ -103,12 +103,12 @@
                             <tr>
                               <td>{{$driver->id}}</td>
                               <td>{{$driver->name}}</td>
-                              <td>{{$driver->status}}</td>
-                              <td>{{$latitude = $driver->latitude}}</td>
-                              <td>{{$longitude = $driver->longitude}}</td>
-                              <td><label class="badge badge-success">Approved</label></td>
-                              <td><a href="#"  onclick="updateCoords()" class="btn btn-outline-success btn-sm">Show Location</a></td>
-                              <td><a href="#" class="btn btn-outline-danger btn-sm"> Send Sms </a></td>
+                              <td><label id = "my-label"class="badge badge-danger">{{$driver->status}}</td>
+                              {{-- <td>{{$latitude = $driver->latitude}}</td> --}}
+                              {{-- <td>{{$longitude = $driver->longitude}}</td> --}}
+                              {{-- <td><label class="badge badge-success">Approved</label></td> --}}
+                              <td><a href="#"  onclick="updateCoords()" class="btn btn-outline-warning btn-sm">Show Location</a></td>
+                              <td><a href="#" class="btn btn-outline-success btn-sm"><i class="fa fa-send"></i> Send Sms </a></td>
                             </tr>
                           </tbody>
                           @endif
@@ -121,8 +121,7 @@
             </div>
             <div>
                 <h4> Driver Current  loccation </h4>
-                {{-- {{$latitude = 30.205753}}
-                {{$longtiude = 31.924526 }} --}}
+                 {{-- {{$address}} --}}
                 <div id="map"> </div>
            </div>
             <!--=================================
@@ -218,6 +217,28 @@ function updateCoords() {
   navigator.geolocation.watchPosition(success, error);
 
   </script>
+
+<script>
+// Set the latitude and longitude
+var lat = 60.507023; // replace with your latitude
+var lng = -0.127812; // replace with your longitude
+
+// Make a request to the Nominatim API
+var url = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=' + lat + '&lon=' + lng;
+$.ajax({
+  url: url,
+  dataType: 'json',
+  success: function(data) {
+    // Extract the city name from the response
+    var city = data.address.city;
+    console.log('sss :', city);
+  },
+  error: function(xhr, status, error) {
+    console.log('Error:', error);
+  }
+});
+
+</script>
 
 </body>
 

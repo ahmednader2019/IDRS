@@ -22,7 +22,7 @@
     </li>
     {{-- @endcan --}}
 
-    @can('Add Driver Inf')
+    {{-- @can('Add Driver Inf') --}}
     {{-- <li>
         <a href="javascript:void(0);" data-toggle="collapse" data-target="#calendar-menu">
             <div class="pull-left"><i class="fa fa-address-card"></i><span
@@ -40,7 +40,7 @@
         <a href="{{URL('Driver')}}"><i class="fa fa-address-book"></i><span class="right-nav-text"> Add Driver
               </span> </a>
     </li>
-    @endcan
+    {{-- @endcan --}}
     <!-- menu title -->
     <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Components </li>
     <!-- menu item Elements-->
@@ -71,7 +71,9 @@
             <div class="clearfix"></div>
         </a>
         <ul id="calendar-menuuu" class="collapse" data-parent="#sidebarnav">
-            <li> <a href="{{URL('urgent')}}">Show inf </a> </li>
+            <li> <a href="{{URL('urgent')}}">Show urgent </a> </li>
+            <li> <a href="{{URL('safe')}}">Show safe </a> </li>
+
         </ul>
     </li>
     <!-- menu item todo-->

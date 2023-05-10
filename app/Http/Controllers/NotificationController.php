@@ -13,7 +13,7 @@ class NotificationController extends Controller
 
 
     $response = $client->sms()->send(
-        new \Vonage\SMS\Message\SMS("201277807195",'IDRS', 'Hello From IDRSsend-sms-notification  ')
+        new \Vonage\SMS\Message\SMS("201277807195",'IDRS', 'Hello From IDRS send-sms-notification  ')
     );
 
     $message = $response->current();

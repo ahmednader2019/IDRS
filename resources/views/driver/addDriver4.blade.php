@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h2 style="text-align: center; color: blue;">  Attachements </h2>
+    <h3 style="text-align: center; color: rgb(97, 97, 115);">  Attachements </h3>
     <div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
@@ -18,15 +18,15 @@
         @csrf
         <div style="margin-bottom: 20px;">
             <label for="filename1" style="font-weight: bold; font-size: 18px;">Personal Photo:</label>
-            <input type="file" name="filename1" id="filename1" style="margin-left: 10px;">
+            <input type="file" name="personal_photo" id="personal_photo" style="margin-left: 10px;" >
           </div>
           <div style="margin-bottom: 20px;">
             <label for="filename2" style="font-weight: bold; font-size: 18px;">Driver License:</label>
-            <input type="file" name="filename2" id="filename2" style="margin-left: 10px;">
+            <input type="file" name="driver_licence" id="driver_licence" style="margin-left: 10px;">
           </div>
           <div style="margin-bottom: 20px;">
             <label for="filename3" style="font-weight: bold; font-size: 18px;">Car License:</label>
-            <input type="file" name="filename3" id="filename3" style="margin-left: 10px;">
+            <input type="file" name="car_licence" id="car_licence" style="margin-left: 10px;" >
           </div>
         <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 12px 26px; display: block; margin: 0 ; float: right;">Submit</button>
 

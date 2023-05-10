@@ -4,7 +4,7 @@
 <script src="{{ URL::asset('assets/js/plugins-jquery.js') }}"></script>
 <!-- plugin_path -->
 <script>
-    var plugin_path = 'js/';
+    var plugin_path = 'assets/js/';
 
 </script>
 <!-- chart -->
@@ -52,6 +52,9 @@
 <script>
     setInterval(function() {
         $("#driver-table").load(window.location.href + " #driver-table");
-        // $("#unreadNotifications").load(window.location.href + " #unreadNotifications");
+
+        $("#unreadNotifications").load(window.location.href + " #unreadNotifications");
+        $("#unreadNotification_count").load(window.location.href + " #unreadNotification_count");
+
     }, 5000);
 </script>

@@ -3,14 +3,22 @@
 
 @section('content')
 
-    <h2 style="text-align: center; color: blue;"> Health Information  </h2>
-    <div>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div style="display:none">
+        {{ $diabetes = $health->diabetes }}
+        {{ $pressure = $health->pressure }}
+        {{ $diseases = $health->diseases }}
+        {{ $surgeries = $health->surgeries }}
     </div>
-       {{ $diabetes = $health->diabetes }}
-       {{ $pressure = $health->pressure }}
-       {{ $diseases = $health->diseases }}
-       {{ $surgeries = $health->surgeries }}
+    <div class="row">
+        <div class="col-xl-12 mb-30">
+          <div class="card card-statistics h-100">
+            <div class="card-body">
+            <div class="d-block">
+                          <h3 class="card-title pb-0 border-0" style="color: #5398be ;">Medical Informations </h3>
+            </div>
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
     <form  action="{{URL('update_health')}}" method="POST" >
         @csrf
         <div class="form-row">

@@ -3,7 +3,13 @@
 
 @section('content')
 
-    <h2 style="text-align: center; color: blue;"> Car Information </h2>
+<div class="row">
+    <div class="col-xl-12 mb-30">
+      <div class="card card-statistics h-100">
+        <div class="card-body">
+      <div class="d-block">
+                      <h3 class="card-title pb-0 border-0" style="color: #5398be ;">Car Informations </h3>
+      </div>
     <div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
@@ -60,6 +66,9 @@
     {{-- <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 12px 26px; display: block; margin: 0 ; float: right; ">Update</button> --}}
  </form>
 
+</div>
+</div>
+</div>
 </div>
 </div>
 @endsection

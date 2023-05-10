@@ -15,13 +15,14 @@ Add Information
         {{ session('error') }}
     </div>
 @endif
-<div>
-    <h2 style="text-align: center; color: blue;"> Driver Information </h2>
-</div>
+
 <div class="row">
     <div class="col-xl-12 mb-30">
       <div class="card card-statistics h-100">
         <div class="card-body">
+          <div class="d-block">
+                          <h3 class="card-title pb-0 border-0" style="color: #5398be ;">Driver Informations </h3>
+          </div>
     <div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
@@ -63,10 +64,13 @@ Add Information
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
          </div>
-      <div class="form-group">
-        <label for="date"> Date Of Birth </label>
-        <input type="date" class="form-control" id="date"  name="date" value="{{ old('date', session('form_data1.date')) }}">
-      </div>
+         <div class="form-group">
+            <label for="date"> Date Of Birth </label>
+            <input type="text" class="form-control date-picker-default" id="date"  name="date" value="{{ !empty(session('form_data1.date')) ? session('form_data1.date') : old('date') }}" >
+            @error('date')
+            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+            @enderror
+        </div>
 
         <div class="form-group col-md-6">
           <label for="address">Address</label>
@@ -116,7 +120,10 @@ Add Information
               <div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
-            <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 12px 26px; display: block; margin: 0 ; float: right; ">Next</button>
+             <button type="submit" class="button" style=" float: right; ">
+                <span>Next</span>
+                <i class="fa fa-angle-right"></i>
+             </button>
 
  </form>
          </div>

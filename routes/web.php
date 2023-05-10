@@ -23,9 +23,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
 // Route::get('/', function () {
 //     return view('dashboard');
 // });
@@ -86,8 +91,15 @@ Route::post('/update_health'  , [DriverInfController::class , 'update_health']);
           // Show urgent cars data
 Route::get('/urgent' , [DriverInfController::class , 'urgent']);
 
+        // show safe cars
+Route::get('/safe' , [DriverInfController::class , 'safe']);
+
+
          // Show Control Page
 Route::get('/control' , [DriverInfController::class , 'control']);
+
+       // a function to bring the location through lat and long variables
+Route::get('/location/{id}' , [DriverInfController::class , 'location']);
 
 Route::get('/download/{id}/{filename}', [DriverInfController::class,'download'])->name('file.download');
 

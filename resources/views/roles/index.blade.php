@@ -60,22 +60,23 @@ Users Permissions
 @endif
 
 <!-- row -->
-<div class="row row-sm">
-    <div class="col-xl-12">
-        <div class="card">
-            <div class="card-header pb-0">
-                <div class="d-flex justify-content-between">
-                    <div class="col-lg-12 margin-tb">
-                        <div class="pull-right">
-                            {{-- @can('اضافة صلاحية') --}}
-                                <a class="btn btn-primary btn-sm" href="{{ route('roles.create') }}">Add</a>
-                            {{-- @endcan --}}
-                        </div>
+<div class="col-xl-12">
+    <div class="card">
+        <div class="card-header pb-0">
+            <div class="d-flex justify-content-between">
+                <div class="col-lg-12 margin-tb">
+                    <div class="pull-right">
+                        {{-- @can('اضافة صلاحية') --}}
+                            <a class="btn btn-primary btn-sm" href="{{ route('roles.create') }}">Add</a>
+                        {{-- @endcan --}}
                     </div>
-                    <br>
                 </div>
-
+                <br>
             </div>
+
+        </div>
+<div class="row row-sm">
+
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table mg-b-0 text-md-nowrap table-hover ">
@@ -129,6 +130,56 @@ Users Permissions
 </div>
 <!-- main-content closed -->
 @endsection
+
+<div class="row">
+    <div class="col-xl-12 mb-30">
+      <div class="card card-statistics h-100">
+        <div class="card-body">
+         <div class="d-block d-md-flex justify-content-between">
+            <div class="d-block">
+              <h5 class="card-title pb-0 border-0">Data Local</h5>
+            </div>
+            <div class="d-block d-md-flex clearfix sm-mt-20">
+               <div class="widget-search ml-0 clearfix">
+                <i class="fa fa-search"></i>
+                <input type="search" class="form-control" placeholder="Search....">
+              </div>
+             </div>
+           </div>
+           <div class="table-responsive mt-15">
+            <table id="driver-table" class="table center-aligned-table mb-0">
+              <thead>
+                <tr class="text-dark">
+                  <th>Driver ID </th>
+                  <th>Driver Name</th>
+                  <th> Driver Age </th>
+                  <th>Current Status</th>
+                </tr>
+              </thead>
+
+              @foreach($driver as $driver)
+              @if($driver->status == 'done')
+              <tbody>
+                <tr>
+                  <td>{{$driver->id}}</td>
+                  <td>{{$driver->name}}</td>
+                  <td>{{$driver->age}}</td>
+                  <td><label id ="my-label" class="badge badge-success">{{$driver->status}}</td>
+                  {{-- <td><label class="badge badge-success">Approved</label></td> --}}
+                  {{-- <td><a href="#"  onclick="updateCoords()" class="btn btn-outline-warning btn-sm">Show Location</a></td> --}}
+                  {{-- <td><a href="#" class="btn btn-outline-success btn-sm"><i class="fa fa-send"></i> Send Sms </a></td> --}}
+                </tr>
+              </tbody>
+              @endif
+              @endforeach
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div>
+</div>
 @section('js')
 <!--Internal  Notify js -->
 <script src="{{ URL::asset('assets/plugins/notify/js/notifIt.js') }}"></script>

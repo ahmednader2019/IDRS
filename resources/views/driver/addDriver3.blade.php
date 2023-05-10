@@ -3,7 +3,6 @@
 
 @section('content')
 
-    <h2 style="text-align: center; color: blue;"> Medical Information  </h2>
     <div>
         &nbsp;&nbsp;
     </div>
@@ -11,6 +10,9 @@
         <div class="col-xl-12 mb-30">
           <div class="card card-statistics h-100">
             <div class="card-body">
+            <div class="d-block">
+                          <h3 class="card-title pb-0 border-0" style="color: #5398be ;">Medical Informations </h3>
+            </div>
         <div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
@@ -90,12 +92,18 @@
 
          <br>
     <a >
-        <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 12px 26px; display: block; margin: 0 ; float: right; "> Next </button>
+             <button type="submit" class="button" style=" float: right; ">
+                <span>Next</span>
+                <i class="fa fa-angle-right"></i>
+             </button>
     </a>
 </form>
 
 <a href="{{URL('step2')}}">
-    <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 12px 26px; display: block; margin: 0 ; float: left;">Previous</button>
+    <button type="submit" class="button" style=" float: left; ">
+    <i class="fa fa-angle-left"></i>
+    <span>Previous<span>
+    </button>
 </a>
 </div>
 </div>

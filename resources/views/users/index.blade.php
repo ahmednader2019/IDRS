@@ -37,28 +37,34 @@
     </div>
 @endif
 
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="col-sm-1 col-md-2">
+            {{-- @can('اضافة مستخدم') --}}
+                <a class="btn btn-primary btn-sm" href="{{ route('users.create') }}"> Add User </a>
+            {{-- @endcan --}}
+        </div>
+     </div>
 <!-- row opened -->
-<div class="row row-sm">
-    <div class="col-xl-12">
-        <div class="card">
-            <div class="card-header pb-0">
-                <div class="col-sm-1 col-md-2">
-                    {{-- @can('اضافة مستخدم') --}}
-                        <a class="btn btn-primary btn-sm" href="{{ route('users.create') }}"> Add User </a>
-                    {{-- @endcan --}}
-                </div>
-            </div>
+
+    <div class="row">
+        <div class="col-xl-12 mb-30">
+          <div class="card card-statistics h-100">
             <div class="card-body">
-                <div class="table-responsive hoverable-table">
-                    <table class="table table-hover" id="example1" data-page-length='50' style=" text-align: center;">
-                        <thead>
-                            <tr>
-                                <th class="wd-10p border-bottom-0">#</th>
-                                <th class="wd-15p border-bottom-0"> User name</th>
-                                <th class="wd-20p border-bottom-0"> Email </th>
-                                <th class="wd-15p border-bottom-0"> User Status </th>
-                                <th class="wd-15p border-bottom-0"> User Type </th>
-                                <th class="wd-10p border-bottom-0"> Process </th>
+             <div class="d-block d-md-flex justify-content-between">
+                <div class="d-block">
+                  {{-- <h5 class="card-title pb-0 border-0">Data Local</h5> --}}
+                </div>
+               <div class="table-responsive mt-15">
+                <table id="driver-table" class="table center-aligned-table mb-0">
+                  <thead>
+                                <tr class="text-dark">
+                                <th >#</th>
+                                <th > User name</th>
+                                <th > Email </th>
+                                <th > User Status </th>
+                                <th> User Type </th>
+                                <th> Process </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -108,6 +114,7 @@
             </div>
         </div>
     </div>
+</div>
     <!--/div-->
 
     <!-- Modal effects -->

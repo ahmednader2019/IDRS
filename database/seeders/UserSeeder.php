@@ -23,10 +23,10 @@ class UserSeeder extends Seeder
             'email' => 'user@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('12345678'),
-            'roles_name' => ['User'],
+            'roles_name' => 'User',
             'Status' => 'active',
         ]);
-        $role = Role::create(['name' => 'User']);
+        $role = Role::create(['name' => "User"]);
         $permissions = Permission::pluck('id','id')->all();
         $role->syncPermissions($permissions);
         $user->assignRole([$role->id]);
