@@ -17,16 +17,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\DriverInf::factory(10)->create();
+        \App\Models\Car::factory(10)->create();
+        \App\Models\Health::factory(10)->create();
+        \App\Models\Photo::factory(10)->create();
+
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
 
-        DriverInf::factory(10)->has(
-            Car::factory()->has(
-            Health::factory()->count(1))->count(1)
-            )->create();
+
     }
 }

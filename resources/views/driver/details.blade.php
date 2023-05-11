@@ -78,7 +78,7 @@
                                    <h5 class="card-title border-0 pb-0">Car Informations</h5>
                                     <div class="table-responsive">
                                       <table class="table table-1 table-bordered table-striped mb-0">
-                                        @foreach ($car as $car )
+                                        {{-- @foreach ($car as $car ) --}}
                                         <thead>
                                           <tr>
                                             <th> Car Number </th>
@@ -91,7 +91,7 @@
                                             <td>{{$car->car_type}}</td>
                                           </tr>
                                         </tbody>
-                                        @endforeach
+                                        {{-- @endforeach --}}
                                       </table>
                                    </div>
                                   </div>
@@ -105,7 +105,6 @@
                                    <h5 class="card-title border-0 pb-0">Medical Inforamtions </h5>
                                     <div class="table-responsive">
                                       <table class="table table-1 table-bordered table-striped mb-0">
-                                        @foreach ($health as $health )
                                         <thead>
                                           <tr>
                                             <th> Pressure blood  </th>
@@ -128,7 +127,6 @@
                                             <td>{{$health->surgeries_details}}</td>
                                           </tr>
                                         </tbody>
-                                        @endforeach
                                       </table>
                                    </div>
                                   </div>
@@ -139,9 +137,9 @@
                             <div class="row">
                                   <div class="col-xl-4 mb-30">
                                     <div class="card card-statistics h-100">
-                                        @foreach ( $attachments as $attachement  )
-                                        <img  width="360px" height= "320px" src="{{asset('storage/images/personal/' .$attachement->personal_photo )}}" >
-                                         @endforeach
+                                        {{-- @foreach ( $attachments as $attachement  ) --}}
+                                        <img  width="360px" height= "320px" src="{{asset('storage/images/personal/' .$attachments->personal_photo )}}" >
+                                         {{-- @endforeach --}}
                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                          <div style="display: flex; justify-content: center; align-items: center;">
@@ -155,9 +153,7 @@
 
                                   <div class="col-xl-4 mb-30">
                                     <div class="card card-statistics h-100">
-                                        @foreach ( $attachments as $attachement  )
-                                        <img  width="360px" height= "320px" src="{{asset('storage/images/driverLicences/' .$attachement->driver_licence )}}" >
-                                         @endforeach
+                                        <img  width="360px" height= "320px" src="{{asset('storage/images/driverLicences/' .$attachments->driver_licence )}}" >
                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                          <div style="display: flex; justify-content: center; align-items: center;">
@@ -171,9 +167,7 @@
 
                                   <div class="col-xl-4 mb-30">
                                     <div class="card card-statistics h-100">
-                                        @foreach ( $attachments as $attachement  )
-                                        <img  width="360px" height= "320px" src="{{asset('storage/images/carsLicences/' .$attachement->car_licence )}}" >
-                                         @endforeach
+                                        <img  width="360px" height= "320px" src="{{asset('storage/images/carsLicences/' .$attachments->car_licence )}}" >
                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                          <div style="display: flex; justify-content: center; align-items: center;">

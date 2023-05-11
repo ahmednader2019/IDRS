@@ -273,10 +273,10 @@ class DriverInfController extends Controller
 
     public function edit($id)
     {
-        $driver = DriverInf::where('id',$id)->first();
-        $car = Car::where('driver_id',$id)->get();
-        $health  = Health::where('driver_id',$id)->get();
-        $attachments  = Photo::where('driver_id',$id)->get();
+        $driver = DriverInf::findorFail($id);
+        $car = Car::findorFail($id);
+        $health  = Health::findorFail($id);
+        $attachments  = Photo::findorFail($id);
 
         return view('Driver.details',compact('driver','car','health','attachments'));
     }

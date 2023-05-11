@@ -717,6 +717,8 @@
                 {{$safe = \App\Models\DriverInf::where('status','done')->count()}}
                 {{$dan_perc =round($danger / $total  * 100) }}
                 {{$safe_perc= round($safe / $total  * 100) }}
+                {{$stable = \App\Models\DriverInf::where('status','stable')->count()}}
+                {{$stable_perc = round($stable / $total  * 100) }}
             </div>
             <div class="col-xl-3 col-sm-6">
                <div class="row">
@@ -798,17 +800,17 @@
          <div class="col-xl-4 mb-30">
           <div class="card data-usage h-100">
           <div class="card-body">
-            <h5 class="card-title">Monthly Usage</h5>
+            <h5 class="card-title">Stable Cars </h5>
             <div class="row d-flex align-items-center">
               <div class="col-sm-6">
-                <span class="round-chart" data-percent="77" data-width="5" data-color="#84ba3f">
+                <span class="round-chart" data-percent="{{$stable_perc}}" data-width="5" data-color="#84ba3f">
                   <span class="percent"></span>
                 </span>
               </div>
               <div class="col-sm-6">
-                <h2 class="theme-color font-weight-bold">70.45 GB</h2>
+                <h2 class="theme-color font-weight-bold">{{$stable}}</h2>
                 <small>Current Plan</small>
-                <h5 class="mt-2 text-dark">263 GB Per Month</h5></div>
+                <h5 class="mt-2 text-dark">{{$total}}</h5></div>
             </div>
             <p><strong>Note:</strong> You can upgrade your existing Premium Plan to a plan with more features, or a longer subscription period.</p>
           </div>
