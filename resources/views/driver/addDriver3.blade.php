@@ -11,7 +11,7 @@
           <div class="card card-statistics h-100">
             <div class="card-body">
             <div class="d-block">
-                          <h3 class="card-title pb-0 border-0" style="color: #5398be ;">Medical Informations </h3>
+                          <h3 class="card-title pb-0 border-0" style="color: #5398be ;"><span><i class="fa fa-heart fa-sm "></i></span>    Medical Informations </h3>
             </div>
         <div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

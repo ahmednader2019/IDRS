@@ -7,7 +7,7 @@
   viewBox="0 0 38 38" 
   preserveAspectRatio="xMinYMin meet"
   >
-   <text x="12" y="21" font-family="arial" font-size="3px" style="letter-spacing:0.6" fill="#323232">Loading...
+   <text x="12" y="21" font-family="arial" font-size="3px" style="letter-spacing:0.6" fill="#323232">I D R S...
      <animate 
        attributeName="opacity"
        values="0;1;0" dur="1.8s"
@@ -23,7 +23,7 @@
     S32.922,27.125,32.922,20C32.922,12.875,27.125,7.078,20,7.078z">
   </path>
 
-  <path fill="#2AA198" stroke="#88c425" stroke-width="1.2" stroke-miterlimit="10" d="M5.203,20
+  <path fill="#5398BE" stroke="#5398BE" stroke-width="1.2" stroke-miterlimit="10" d="M5.203,20
 			c0-8.159,6.638-14.797,14.797-14.797V5C11.729,5,5,11.729,5,20s6.729,15,15,15v-0.203C11.841,34.797,5.203,28.159,5.203,20z">
   <animateTransform
         attributeName="transform"
@@ -37,7 +37,7 @@
         repeatCount="indefinite" />      
    </path>
 
-  <path fill="#859900" stroke="#508100" stroke-width="0.7" stroke-miterlimit="10" d="M7.078,20
+  <path fill="#859900" stroke="#A0ECD0" stroke-width="0.7" stroke-miterlimit="10" d="M7.078,20
   c0-7.125,5.797-12.922,12.922-12.922V6.875C12.763,6.875,6.875,12.763,6.875,20S12.763,33.125,20,33.125v-0.203
   C12.875,32.922,7.078,27.125,7.078,20z">
    <animateTransform

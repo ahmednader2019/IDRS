@@ -9,7 +9,7 @@
      {{-- @can('Owner') --}}
     <li>
         <a href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard">
-            <div class="pull-left"><i class="fa fa-group"></i><span class="right-nav-text">Permissions</span>
+            <div class="pull-left"><i class="ti-unlock"></i><span class="right-nav-text">Permissions</span>
             </div>
             <div class="pull-right"><i class="ti-plus"></i></div>
             <div class="clearfix"></div>
@@ -25,7 +25,7 @@
     {{-- @can('Add Driver Inf') --}}
     {{-- <li>
         <a href="javascript:void(0);" data-toggle="collapse" data-target="#calendar-menu">
-            <div class="pull-left"><i class="fa fa-address-card"></i><span
+            <div class="pull-left"><i class="ti-plus"></i><span
                     class="right-nav-text">Add Information</span></div>
             <div class="pull-right"><i class="ti-plus"></i></div>
             <div class="clearfix"></div>
@@ -37,7 +37,7 @@
     <li>
         {{-- <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tv"></i> fa fa-tv</div> --}}
 
-        <a href="{{URL('Driver')}}"><i class="fa fa-address-book"></i><span class="right-nav-text"> Add Driver
+        <a href="{{URL('Driver')}}"><i class="ti-plus"></i><span class="right-nav-text"> Add Driver
               </span> </a>
     </li>
     {{-- @endcan --}}
@@ -46,7 +46,7 @@
     <!-- menu item Elements-->
     <li>
         <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
-            <div class="pull-left"><i class="ti-palette"></i><span
+            <div class="pull-left"><i class="ti-info"></i><span
                     class="right-nav-text">Show Information</span></div>
             <div class="pull-right"><i class="ti-plus"></i></div>
             <div class="clearfix"></div>
@@ -65,9 +65,9 @@
 
     <li>
         <a href="javascript:void(0);" data-toggle="collapse" data-target="#calendar-menuuu">
-            <div class="pull-left"><i class="ti-calendar"></i><span
+            <div class="pull-left"><i class="ti-alert"></i><span
                     class="right-nav-text">Show Urgent </span></div>
-            <div class="pull-right"><i class="ti-plus"></i></div>
+            <div class="pull-right"><span class="badge badge-pill badge-danger float-left mt-1">1</span>  <i class="ti-plus"></i></div>
             <div class="clearfix"></div>
         </a>
         <ul id="calendar-menuuu" class="collapse" data-parent="#sidebarnav">
@@ -80,7 +80,7 @@
     <li>
         {{-- <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tv"></i> fa fa-tv</div> --}}
 
-        <a href="{{URL('control')}}"><i class="fa fa-desktop"></i><span class="right-nav-text"> Control
+        <a href="{{URL('control')}}"><i class="ti ti-desktop"></i><span class="right-nav-text"> Control
               </span> </a>
     </li>
     <!-- menu item chat-->

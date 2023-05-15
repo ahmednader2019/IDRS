@@ -12,16 +12,16 @@
                       <div class="tab round">
                      <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                          <a class="nav-link active show" id="home-07-tab" data-toggle="tab" href="#home-07" role="tab" aria-controls="home-07" aria-selected="true"> <i class="fa fa-home"></i> Driver </a>
+                          <a class="nav-link active show" id="home-07-tab" data-toggle="tab" href="#home-07" role="tab" aria-controls="home-07" aria-selected="true"> <i class="fa fa-user"></i> Driver </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" id="profile-07-tab" data-toggle="tab" href="#profile-07" role="tab" aria-controls="profile-07" aria-selected="false"><i class="fa fa-user"></i> Car </a>
+                          <a class="nav-link" id="profile-07-tab" data-toggle="tab" href="#profile-07" role="tab" aria-controls="profile-07" aria-selected="false"><i class="fa fa-car"></i> Car </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" id="portfolio-07-tab" data-toggle="tab" href="#portfolio-07" role="tab" aria-controls="portfolio-07" aria-selected="false"><i class="fa fa-picture-o"></i> Medical </a>
+                          <a class="nav-link" id="portfolio-07-tab" data-toggle="tab" href="#portfolio-07" role="tab" aria-controls="portfolio-07" aria-selected="false"><i class="fa fa-heart"></i> Medical </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" id="contact-07-tab" data-toggle="tab" href="#contact-07" role="tab" aria-controls="contact-07" aria-selected="false"><i class="fa fa-check-square-o"></i> Attachements </a>
+                          <a class="nav-link" id="contact-07-tab" data-toggle="tab" href="#contact-07" role="tab" aria-controls="contact-07" aria-selected="false"><i class="fa fa-picture-o"></i> Attachements </a>
                         </li>
                       </ul>
                       <div class="tab-content">
@@ -29,16 +29,16 @@
                             <div class="col-xl-12 mb-30">
                                 <div class="card card-statistics h-100">
                                   <div class="card-body">
-                                   <h5 class="card-title border-0 pb-0">Driver Informations </h5>
+                                   <h5 class="card-title border-0 pb-0" style="color: #326885">Driver Informations </h5>
                                     <div class="table-responsive">
                                       <table class="table table-1 table-bordered table-striped mb-0">
                                         <thead>
                                           <tr>
-                                            <th>Name </th>
-                                            <th>Email</th>
-                                            <th>Gender </th>
-                                            <th>Phone Number </th>
-                                            <th>Emergnecy Number </th>
+                                            <th style="color:#5398BE">Name </th>
+                                            <th style="color:#5398BE">Email</th>
+                                            <th style="color:#5398BE">Gender </th>
+                                            <th style="color:#5398BE">Phone Number </th>
+                                            <th style="color:#5398BE">Emergnecy Number </th>
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -50,11 +50,11 @@
                                             <td>{{$driver->emergency_number}}</td>
                                           </tr>
                                           <tr>
-                                           <td> City </td>
-                                            <td>Address </td>
-                                            <td>Birth Date </td>
-                                            <td>Nationality </td>
-                                            <td>National-ID</td>
+                                            <th style="color:#5398BE"> City </td>
+                                            <th style="color:#5398BE">Address </td>
+                                            <th style="color:#5398BE">Birth Date </td>
+                                            <th style="color:#5398BE">Nationality </td>
+                                            <th style="color:#5398BE">National-ID</td>
                                           </tr>
                                            <tr>
                                             <td>{{$driver->city}}</td>
@@ -75,14 +75,14 @@
                             <div class="col-xl-12 mb-30">
                                 <div class="card card-statistics h-100">
                                   <div class="card-body">
-                                   <h5 class="card-title border-0 pb-0">Car Informations</h5>
+                                   <h5 class="card-title border-0 pb-0" style="color: #326885">Car Informations</h5>
                                     <div class="table-responsive">
                                       <table class="table table-1 table-bordered table-striped mb-0">
                                         {{-- @foreach ($car as $car ) --}}
                                         <thead>
                                           <tr>
-                                            <th> Car Number </th>
-                                            <th> Car Type </th>
+                                            <th style="color:#5398BE"> Car Number </th>
+                                            <th style="color:#5398BE"> Car Type </th>
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -102,14 +102,14 @@
                             <div class="col-xl-12 mb-30">
                                 <div class="card card-statistics h-100">
                                   <div class="card-body">
-                                   <h5 class="card-title border-0 pb-0">Medical Inforamtions </h5>
+                                   <h5 class="card-title border-0 pb-0" style="color: #326885">Medical Inforamtions </h5>
                                     <div class="table-responsive">
                                       <table class="table table-1 table-bordered table-striped mb-0">
                                         <thead>
                                           <tr>
-                                            <th> Pressure blood  </th>
-                                            <th> Diabetes </th>
-                                            <th> Blood Type </th>
+                                            <th style="color:#5398BE"> Pressure blood  </th>
+                                            <th style="color:#5398BE"> Diabetes </th>
+                                            <th style="color:#5398BE"> Blood Type </th>
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -119,8 +119,8 @@
                                             <td>{{$health->blood}}</td>
                                           </tr>
                                           <tr>
-                                            <td> Chronic Disease </td>
-                                            <td> Previous Surgeries </td>
+                                            <th style="color:#5398BE"> Chronic Disease </td>
+                                            <th style="color:#5398BE"> Previous Surgeries </td>
                                           </tr>
                                            <tr>
                                             <td> {{$health->diseases_details}}</td>

@@ -71,7 +71,7 @@
                     <div class="card-body">
                      <div class="d-block d-md-flex justify-content-between">
                         <div class="d-block">
-                          <h5 class="card-title pb-0 border-0">Data Local</h5>
+                          <h5 class="card-title pb-0 border-0"><span><i class="fa fa-car fa-sm " style="color:#28a745"></i></span> Safe Cars</h5>
                         </div>
                         <div class="d-block d-md-flex clearfix sm-mt-20">
                            <div class="widget-search ml-0 clearfix">

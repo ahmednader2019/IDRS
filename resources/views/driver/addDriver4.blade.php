@@ -3,7 +3,6 @@
 
 @section('content')
 
-    <h3 style="text-align: center; color: rgb(97, 97, 115);">  Attachements </h3>
     <div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
@@ -11,6 +10,9 @@
         <div class="col-xl-12 mb-30">
           <div class="card card-statistics h-100">
             <div class="card-body">
+            <div class="d-block">
+                          <h3 class="card-title pb-0 border-0" style="color: #5398be ;"><span><i class="fa fa-paperclip fa-sm "></i></span>    Attachements </h3>
+            </div>
         <div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
@@ -18,22 +20,37 @@
         @csrf
         <div style="margin-bottom: 20px;">
             <label for="filename1" style="font-weight: bold; font-size: 18px;">Personal Photo:</label>
-            <input type="file" name="personal_photo" id="personal_photo" style="margin-left: 10px;" >
-          </div>
+            <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+        </div>
           <div style="margin-bottom: 20px;">
             <label for="filename2" style="font-weight: bold; font-size: 18px;">Driver License:</label>
-            <input type="file" name="driver_licence" id="driver_licence" style="margin-left: 10px;">
+            <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
           </div>
           <div style="margin-bottom: 20px;">
             <label for="filename3" style="font-weight: bold; font-size: 18px;">Car License:</label>
-            <input type="file" name="car_licence" id="car_licence" style="margin-left: 10px;" >
+            <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
           </div>
-        <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 12px 26px; display: block; margin: 0 ; float: right;">Submit</button>
+          <button type="submit" class="button" style=" float: right; ">
+                <span>Submit</span>
+                <i class="fa fa-check-circle"></i>
+             </button>
 
     </form>
 
  <a href="{{URL('step3')}}">
-    <button type="submit" class="btn btn-primary" style="font-size: 15px; padding: 12px 26px; display: block; margin: 0 ; float: left;">Previous</button>
+ <button type="submit" class="button" style=" float: left; ">
+    <i class="fa fa-angle-left"></i>
+    <span>Previous<span>
+    </button>
 </a>
 </div>
 </div>

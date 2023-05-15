@@ -89,7 +89,7 @@ a:hover {
   Elements
   ================================================== */
 .btn {
-  background-color: #199EB8;
+  background-color: #5398BE;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 800;
   color: #fff;
@@ -98,7 +98,7 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #E04F00;
+  background-color: #A0ECD0;
   color: #fff;
 }
 

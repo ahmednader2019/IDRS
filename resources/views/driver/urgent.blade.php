@@ -31,7 +31,7 @@
             padding: 0.6rem 0.9rem; /* increase padding to 0.3rem top/bottom and 0.6rem left/right */
             /* background-color: #160b0c; set background color to red */
             }
-            #map { height: 300px;  width: 1210px}
+            #map { height: 300px}
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -74,7 +74,7 @@
                     <div class="card-body">
                      <div class="d-block d-md-flex justify-content-between">
                         <div class="d-block">
-                          <h5 class="card-title pb-0 border-0"> Urgent Cars </h5>
+                          <h5 class="card-title pb-0 border-0"><span><i class="fa fa-car fa-sm " style="color:#dc3545"></i></span> Urgent Cars </h5>
                         </div>
                         <div class="d-block d-md-flex clearfix sm-mt-20">
                            <div class="widget-search ml-0 clearfix">
@@ -119,11 +119,26 @@
                   </div>
                 </div>
             </div>
-            <div>
-                <h4> Driver Current  loccation </h4>
-                 {{-- {{$address}} --}}
-                <div id="map"> </div>
-           </div>
+
+            <div class="row">
+                <div class="col-xl-12 mb-30">
+                  <div class="card card-statistics h-100">
+                    <div class="card-body">
+                      <div>
+                        <div class="d-block d-md-flex justify-content-between">
+                         <div class="d-block">
+                          <h5 class="card-title pb-0 border-0"><span><i class="fa fa-crosshairs fa-sm fa-spin " style="color:#dc3545"></i></span> Driver's Current  loccation {{-- {{$address}} --}} </h5>
+                         </div>
+                        </div>
+                        <div>
+                           {{-- {{$address}} --}}
+                          <div id="map"> </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
             <!--=================================
  wrapper -->
 

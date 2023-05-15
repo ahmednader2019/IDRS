@@ -54,17 +54,17 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-md-12">
-          <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="LP/assets/img/logo.png"></a>
+          <a class="hero-brand" href="/" title="Home"><img alt="Bell Logo" src="LP/assets/img/logo.png"></a>
         </div>
       </div>
 
       <div class="col-md-12">
         <h1>
-          A theme with personality
+          Intelligent Driver Rescue System
         </h1>
 
         <p class="tagline">
-          This is a powerful theme with some great features that you can use in your future projects.
+          Drive safe with our emergency system.
         </p>
         {{-- <a class="btn btn-full scrollto" href="#about">Get Started Now</a> --}}
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
